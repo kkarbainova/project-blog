@@ -22,7 +22,7 @@ RUN docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql && docker-php-ex
 
 RUN apt-get update && \
 apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev && \
-docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/ && \
+docker-php-ext-configure gd --with-freetype=/usr/includes/ --with-jpeg=/usr/includes/ && \
 docker-php-ext-install gd
 
 
