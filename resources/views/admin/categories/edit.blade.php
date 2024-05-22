@@ -29,8 +29,9 @@
                         <h6 class="mb-3">
 
                         </h6>
-                        <form action="#" method="POST" class="w-25">
+                        <form action="{{ route('admin.category.show', $category->id) }}" method="POST" class="w-25">
                             @csrf
+                            @method('PATCH')
                             <div class="form-group">
                                 <input type="text" class="form-control" name="title" placeholder="Название категории"
                                        value="{{ $category->title }}">
