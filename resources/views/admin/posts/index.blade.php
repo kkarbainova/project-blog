@@ -44,7 +44,7 @@
                                     <tbody>
                                     @foreach($posts as $post)
                                         <tr>
-                                            <td>{{ $opst->id }}</td>
+                                            <td>{{ $post->id }}</td>
                                             <td>{{ $post->title }}</td>
                                             <td class="text-center"><a href="{{ route('admin.post.show', $post->id) }}"><i
                                                         class="fas fa-eye"></i></a></td>
