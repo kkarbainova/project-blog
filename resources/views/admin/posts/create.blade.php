@@ -29,7 +29,7 @@
                         <h6 class="mb-3">
 
                         </h6>
-                        <form action="{{ route('admin.post.store') }}" method="POST">
+                        <form action="{{ route('admin.post.store') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group w-25">
                                 <input type="text" class="form-control" name="title" placeholder="Название поста"
@@ -46,6 +46,30 @@
                                 @error('content')
                                 <div class="text-danger">Это поле необходимо для заполнения</div>
                                 @enderror
+                            </div>
+                            <div class="form-group w-50">
+                                <label for="exampleInputFile">Добавить превью</label>
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" name="preview_image">
+                                        <label class="custom-file-label">Выбрать изображение</label>
+                                    </div>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">Загрузить</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group w-50">
+                                <label for="exampleInputFile">Добавить главное изображение</label>
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" name="main_image">
+                                        <label class="custom-file-label">Выбрать изображение</label>
+                                    </div>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">Загрузить</span>
+                                    </div>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <input type="submit" class="btn btn-primary" value="Добавить">
